@@ -3,7 +3,7 @@ import unittest
 def binario2decimal(numero):
     total = 0
     valorPosicional = 1
-    numero = numero[:: -1]
+    numero = numero[:: -1] #invierte el numero para realizar el cálculo
     for bit in numero:
         total += (int(bit)*valorPosicional)
         valorPosicional = valorPosicional*2
@@ -31,6 +31,7 @@ def binario2hexadecimal(binario):
     print (total)
     return (total)
     
+
 if __name__ == '__main__':
     unittest.main()
 
