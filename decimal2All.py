@@ -1,4 +1,5 @@
 import unittest
+from binario2All import binario2hexadecimal, binario2octal
 
 
 def decimal2binario(decimal):
@@ -11,6 +12,13 @@ def decimal2binario(decimal):
     final = final[:: -1]
     return(final)
 
+def decimal2hexadecimal(decimal):
+   binario = decimal2binario(decimal)
+   return(binario2hexadecimal(binario))
+
+def decimal2octal(decimal):
+   binario = decimal2binario(decimal)
+   return(binario2octal(binario))
 
 if __name__ == '__main__':
     unittest.main()
