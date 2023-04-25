@@ -1,3 +1,5 @@
+import unittest
+
 def binario2decimal(numero):
     total = 0
     valorPosicional = 1
@@ -29,9 +31,7 @@ def binario2hexadecimal(binario):
     print (total)
     return (total)
     
-
-
-binario = input("Ingrese un binario: ")
-binario2hexadecimal(binario)
+if __name__ == '__main__':
+    unittest.main()
 
 
