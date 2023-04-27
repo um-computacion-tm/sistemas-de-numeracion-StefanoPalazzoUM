@@ -16,7 +16,7 @@ def binario2octal(binario):
     for i in range(0,len(binario),3): # Separamos en grupos de 3
        digito = int(binario[int(i)])*4 + int(binario[int(i)+1])*2 + int(binario[int(i+2)]) # Le damos peso a cada digito y los guardamos como un digito
        total += str(digito)
-    return (total)
+    return (int(total))
 
 def binario2hexadecimal(binario):
     total = ""                        # Acá se almacena el resultado final
