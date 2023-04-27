@@ -22,19 +22,24 @@ DiccionarioHexadecimal = {
 
 
 
+
 def hexadecimal2binario(hexa):
     hexadecimal = ""
     for digito in hexa:
       hexadecimal += str(DiccionarioHexadecimal[digito])
-    return(hexadecimal)
+    return hexadecimal
+
 
 def hexadecimal2decimal(hexa):
    binario = hexadecimal2binario(hexa)
-   return(binario2decimal(binario))
+   resultado= (binario2decimal(binario))
+   return (resultado)
 
 def hexadecimal2octal(hexa):
    binario = hexadecimal2binario(hexa)
-   return(binario2octal(binario))
+   resultado = (binario2octal(binario))
+   return (resultado)
+
 
 if __name__ == '__main__':
     unittest.main()
