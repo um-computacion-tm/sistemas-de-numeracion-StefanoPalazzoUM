@@ -1,21 +1,58 @@
 import unittest
-from decimal2binario import decimal2binario
-from binario2decimal import binario2decimal
+from decimal2All import decimal2binario, decimal2hexadecimal, decimal2octal
+from binario2All import binario2decimal, binario2hexadecimal, binario2octal
+from Octal2All import octal2binario, octal2decimal, octal2hexadecimal
+from Hexadecimal2All import hexadecimal2binario, hexadecimal2decimal, hexadecimal2octal
 
 
 class TestNumeracion(unittest.TestCase):
-#Tests de binario a decimal
+# Tests de Binario
     def test_binario2decimal_1(self):
         self.assertEqual(binario2decimal('01011100'), 92)
+
     def test_binario2decimal_2(self):
         self.assertEqual(binario2decimal('1100001'), 97)
 
+    def test_binario2hexadecimal(self):
+        self.assertEqual(binario2hexadecimal('10100100'), "A4")
 
-#Tests de decimal a binario
+    def test_binario2octal(self):
+        self.assertEqual(binario2octal('1100001'), 141)
+
+
+#Tests de Decimal
     def test_decimal2binario_1(self):
         self.assertEqual(decimal2binario(97), '1100001')
+
     def test_decimal2binario_2(self):
         self.assertEqual(decimal2binario(92), '1011100')
+
+    def test_decimal2hexadecimal(self):
+        self.assertEqual(decimal2hexadecimal(105), '69')
+
+    def test_decimal2octal(self):
+        self.assertEqual(decimal2octal(123), 173)
+
+#Test de Hexadecimal
+    def test_hexadecimal2binario(self):
+        self.assertEqual(hexadecimal2binario("F5"), "11110101")
+
+    def test_hexadecimal2decimal(self):
+        self.assertEqual(hexadecimal2decimal("C"), 12)
+
+    def test_hexadecimal2octal(self):
+        self.assertEqual(hexadecimal2octal("FA23"), 175043)
+    
+#Test de Octal
+    def test_octal2binario(self):
+        self.assertEqual(octal2binario(5), "101")
+
+    def test_octal2decimal(self):
+        self.assertEqual(octal2decimal(55), 45)
+
+    def test_octal2hexadecimal(self):
+        self.assertEqual(octal2hexadecimal(72), "3A")
+
 
 
 if __name__ == '__main__':
